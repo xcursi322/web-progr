@@ -14,13 +14,13 @@ if (!$id) {
     die("Не вказано ID матеріалу");
 }
 
-// Знаходимо матеріал
+
 $material = Material::find($pdo, $id);
 if (!$material) {
     die("Матеріал не знайдено");
 }
 
-// Обробка форми
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $data = [
         'name' => $_POST['name'],
